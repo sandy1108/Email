@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="130dp"
+    android:background="@drawable/plugin_email_click_selector"
+    android:orientation="horizontal"
+    android:paddingBottom="3dip"
+    android:paddingRight="1dip"
+    android:paddingTop="2dip" >
+
+    <RelativeLayout
+        android:id="@+id/chip"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginRight="2dip"
+        android:minHeight="38dip" 
+        android:visibility="gone"
+        >
+
+        <View
+            android:layout_width="6dip"
+            android:layout_height="fill_parent" />
+
+      
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+		android:layout_marginRight="10dp"        
+        android:layout_marginLeft="10dp"
+         >
+
+         <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+             >
+             
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dip"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="收件人："
+                android:textSize="30px"
+                android:textColor="#434343"
+                
+                />
+
+              <TextView
+                android:id="@+id/from"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+               android:text="123454@qq.com"
+               android:textSize="30px"
+               android:textColor="#434343"
+                />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right|bottom"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="?android:attr/textColorSecondary"
+                android:visibility="gone"
+                 />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="2dp"
+             >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dip"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="标题："
+                android:textSize="28px"
+                android:textColor="#434343"
+                
+                />
+
+            <TextView
+                android:id="@+id/subject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dip"
+                android:gravity="center_vertical"
+                android:text="面试通知"
+                android:singleLine="true"
+                android:textSize="28px"
+                android:textColor="#434343"
+                
+                 />
+        </LinearLayout>
+		<View 
+		    android:layout_width="fill_parent"
+		    android:layout_height="1dp"
+		    android:background="#B8B8B8"
+		    android:layout_marginRight="10dp"
+		    android:layout_marginTop="5dp"
+		    
+		    />
+		<TextView 
+		    android:id="@+id/tv_message"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:lines="2"
+		    android:text="收到贵公司的面试 通知，深表感谢，本人于2015年5月8日，到达指定的面试地点"
+		    android:textSize="26px"
+		    android:layout_marginTop="5dp"
+		    android:textColor="#898989"
+		    />
+       
+    </LinearLayout>
+
+ 
+
+</LinearLayout>

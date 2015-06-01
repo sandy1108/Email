@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zywx.wsq.email"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    
+    
+    <application
+        android:name="com.email.app.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Light.NoTitleBar" >
+        <activity
+            android:name="com.email.LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.email.HomeActivity"/>
+        <activity android:name="com.email.MailEditActivity"/>
+        <activity android:name="com.email.MailBoxActivity" 
+              android:configChanges="orientation|screenSize"  />
+        <activity android:name="com.email.MailContentActivity"/>
+        <activity android:name="com.email.MailConstactsActivity"/>
+        <activity android:name="com.email.MailAddConstact"/>
+        <activity android:name="com.email.MailCaogaoxiangActivity"/>
+        
+        <provider android:name="com.email.provider.EmailConstantProvider"
+            android:authorities="com.emailconstantprovider"/>
+        <provider android:name="com.email.provider.CaogaoxiangProvider"
+            android:authorities="com.caogaoxiangprovider"/>
+        <provider android:name="com.email.provider.AttachmentProvider"
+            android:authorities="com.attachmentprovider"/>
+        <provider android:name="com.email.provider.EmailStatusProvider"
+            android:authorities="com.emailstatusprovider"></provider>
+        
+        
+        <service android:name="com.email.service.SelectAllEmailService"/>
+        <activity android:name="com.email.MailSentActivity"/>
+        <activity android:name="com.email.DialogActivity" android:theme="@android:style/Theme.Dialog"/>
+    </application>
+
+</manifest>

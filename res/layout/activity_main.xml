@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/plugin_email_backgroud"
+    android:orientation="vertical">
+   <include 
+       layout="@layout/title"
+       />
+   <ListView 
+       android:id="@+id/list"
+       android:layout_height="match_parent"
+       android:layout_width="match_parent"
+       android:scrollbars="none"
+       android:divider="#10000000"
+       android:dividerHeight="10dp"
+       android:layout_marginLeft="10dp"
+       android:layout_marginRight="10dp"
+       android:layout_marginTop="5dp"
+       android:listSelector="@android:color/transparent"  
+       />
+
+</LinearLayout>
